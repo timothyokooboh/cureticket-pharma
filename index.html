@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+
+        <title>CureTicket Pharmacy Registration Module</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            :root {
+                font-size: 62.5%
+            }
+
+            body {
+                font-size: 1rem;
+                letter-spacing: 1.08px;
+                margin: 0;
+                background: #F8F8F8;
+                overflow-Y: scroll;
+                font-family: 'Lato', sans-serif;
+                /* Hide scrollbar but keep functionality (for IE and Edge) */ 
+                -ms-overflow-style: none;
+            }
+
+            /* Hide scrollbar but keep functionality (for chrome, safari and opera) */
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            .form-container {
+                max-width: 500px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 10px 10px 40px rgba(0,0,0,0.3);
+                -webkit-box-shadow: 10px 10px 40px rgba(0,0,0,0.3);
+                -moz-box-shadow: 0px 10px 40px rgba(0,0,0,0.3);
+                margin: 50px auto;
+            }
+
+            .project-name{
+                padding-top: 2rem;
+                font-size: 2.5rem;
+                text-align: center;
+                color: #1CD880;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            .form-container .form-title {
+               font-size: 1.8rem;               
+               width: 70%;
+               margin: auto;
+               padding: 20px 0px;
+
+            }
+
+            .form-container .section-title {
+                font-size: 1.8rem;
+               
+               width: 70%;
+               margin: auto;
+            }
+
+            .form-container .number-description {
+               width: 70%;
+               margin: auto;
+               padding: 20px 0px;
+            }
+
+            select {
+                width: 100%;
+                margin: 20px 0px;
+                outline: none;
+                height: 40px;
+                font-size: 1.8rem;
+            }
+
+            input {
+                width: 100%;
+                margin: 20px 0px;
+                outline: none;
+                height: 40px;
+                font-size: 1.8rem;
+                border: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .input-container {
+                width: 70%;
+                margin: auto;
+            }
+
+            label {
+                font-size: 1.6rem;
+            }
+
+            button[type=submit] {
+                width: 100%;
+                outline: none;
+                height: 40px;
+                font-size: 1.8rem;
+                background-color: #1CD880;
+                color: #fff;
+                margin: 20px 0px;
+            }
+
+            button[type=submit]:hover {
+                background-color: #1CD550;
+            }
+
+            #next, #previous {
+                width: 50px;
+                cursor: pointer;
+            }
+
+            .direction-container {
+                display: grid;
+                grid-template-columns: auto auto;
+                align-content: end;
+                justify-content: space-between;
+                margin-top: 100px;
+                padding-bottom: 50px;
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+
+            #previous, #second-section, #third-section {
+                display: none;
+            }
+
+            @media(max-width: 700px) {
+                .form-container {
+                    max-width: 400px;
+                }
+            }
+            @media(max-width: 500px) {
+                .form-container {
+                    max-width: 300px;
+                }
+                .input-container {
+                    width: 80%;
+                }
+                .form-container .form-title  {
+                    width: 80%;
+                }
+                .form-container .section-title  {
+                    width: 80%;
+                }
+                .form-container .number-description  {
+                    width: 80%;
+                }
+            
+            }
+            @media(max-width: 400px) {
+                .form-container {
+                    max-width: 300px;
+                }
+                .input-container  {
+                    width: 90%;
+                }
+                .form-container .form-title  {
+                    width: 90%;
+                }
+                .form-container .section-title  {
+                    width: 90%;
+                }
+                .form-container .number-description  {
+                    width: 90%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="form-container">
+            <h1 class="project-name">CureTicket</h1>        
+            <form action="" method="POST" enctype="multipart/form-data">
+                <h2 class="form-title">PHARMACY REGISTRATION</h2>
+                    <!-- FIRST SECTION -->
+                <div id="first-section">
+                    <p id="one" class="number-description">1 of 3</p>
+                    <h3 class="section-title">Country & Language</h3>
+                    <div class="input-container">
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>Country</option>
+                            <option value="algeria">Algeria</option>
+                            <option value="angola">Angola</option>
+                            <option value="benin">Benin</option>
+                            <option value="botswana">Botswana</option>
+                            <option value="burkina Faso">Burkina Faso</option>
+                            <option value="burundi">Burundi</option>
+                            <option value="cameroon">Cameroon</option>
+                            <option value="cape-verde">Cape Verde</option>
+                            <option value="central-african-republic">Central African Republic</option>
+                            <option value="chad">Chad</option>
+                            <option value="comoros">Comoros</option>
+                            <option value="congo-brazzaville">Congo - Brazzaville</option>
+                            <option value="congo-kinshasa">Congo - Kinshasa</option>
+                            <option value="ivory-coast">Côte d’Ivoire</option>
+                            <option value="djibouti">Djibouti</option>
+                            <option value="egypt">Egypt</option>
+                            <option value="equatorial-guinea">Equatorial Guinea</option>
+                            <option value="eritrea">Eritrea</option>
+                            <option value="ethiopia">Ethiopia</option>
+                            <option value="gabon">Gabon</option>
+                            <option value="gambia">Gambia</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="guinea">Guinea</option>
+                            <option value="guinea-bissau">Guinea-Bissau</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="lesotho">Lesotho</option>
+                            <option value="liberia">Liberia</option>
+                            <option value="libya">Libya</option>
+                            <option value="madagascar">Madagascar</option>
+                            <option value="malawi">Malawi</option>
+                            <option value="mali">Mali</option>
+                            <option value="mauritania">Mauritania</option>
+                            <option value="mauritius">Mauritius</option>
+                            <option value="mayotte">Mayotte</option>
+                            <option value="morocco">Morocco</option>
+                            <option value="mozambique">Mozambique</option>
+                            <option value="namibia">Namibia</option>
+                            <option value="niger">Niger</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="rwanda">Rwanda</option>
+                            <option value="reunion">Réunion</option>
+                            <option value="saint-helena">Saint Helena</option>
+                            <option value="senegal">Senegal</option>
+                            <option value="seychelles">Seychelles</option>
+                            <option value="sierra-leone">Sierra Leone</option>
+                            <option value="somalia">Somalia</option>
+                            <option value="south-africa">South Africa</option>
+                            <option value="sudan">Sudan</option>
+                            <option value="south-sudan">Sudan</option>
+                            <option value="swaziland">Swaziland</option>
+                            <option value="Sao-tome-príncipe">São Tomé and Príncipe</option>
+                            <option value="tanzania">Tanzania</option>
+                            <option value="togo">Togo</option>
+                            <option value="tunisia">Tunisia</option>
+                            <option value="uganda">Uganda</option>
+                            <option value="western-sahara">Western Sahara</option>
+                            <option value="zambia">Zambia</option>
+                            <option value="zimbabwe">Zimbabwe</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <select name="language" id="language" required>
+                            <option value="" selected disabled>Language</option>
+                            <option value="English">English</option>
+                            <option value="French">French</option>
+                            <option value="Arabic">Arabic</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- SECOND SECTION -->
+                <div id="second-section">
+                    <p id="two" class="number-description">2 of 3</p>
+                    <h3 class="section-title">Pharmacy Owner</h3>
+
+                    <div class="input-container">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="mobile1" placeholder="Mobile 1" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="mobile2" placeholder="Mobile 2" required>
+                    </div>
+                    <div class="input-container">
+                        <select name="gender" id="gender" required>
+                            <option value="" selected disabled>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                        
+                    <h3 style="padding-top: 20px;" class="section-title">Premises Details</h2>
+                    <div class="input-container">
+                        <input type="text" name="pharmacyName" placeholder="Name of Pharmacy" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="state" placeholder="State" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="city" placeholder="City" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="registrationYear" id="label">Year of Registration</label>
+                        <input type="date" id="registrationYear" name="registrationYear" placeholder="Year of Registration" required>
+                    </div>
+                    
+                                        
+                </div>
+
+                <!-- THIRD SECTION -->
+                <div id="third-section">
+                    <p id="three" class="number-description">3 of 3</p>
+                    <h3 class="section-title">Attachments</h3>
+                    <div class="input-container">
+                        <input type="number" name="licenseNumber" placeholder="Pharmacy License Number" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="licenseExpDate" id="label" style="text-align: left">License Expiry Date</label>
+                        <input type="date" name="licenseExpDate" id="licenseExpDate" placeholder="License Expiry Date" required>
+                    </div>
+                    <div class="input-container">                    
+                        <input type="file" name="licenseFile" placeholder="Upload Pharmacy License" required>
+                    </div>
+                    <div class="input-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+                
+                <div class="direction-container">
+                    <div>
+                        <img src="/images/previous.svg" alt="" id="previous" title="NEXT">
+                    </div>
+                    <div>
+                        <img src="/images/next.svg" alt="" id="next" title="NEXT">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <script>
+            const next = document.getElementById('next');
+            const previous = document.getElementById('previous');
+            const firstSection = document.getElementById('first-section');
+            const secondSection = document.getElementById('second-section');
+            const thirdSection = document.getElementById('third-section');
+            const one = document.getElementById('one');
+            const two = document.getElementById('two');
+            const three = document.getElementById('three');
+            let num = 1
+
+            next.addEventListener('click', ()=>{
+                num++
+                if(num == 2) {
+                    secondSection.style.display = 'block'
+                    firstSection.style.display = 'none'
+                    previous.style.display = 'block'
+                } else if (num == 3) {
+                    secondSection.style.display = 'none'
+                    thirdSection.style.display = 'block'
+                    previous.style.display = 'block'
+                    next.style.display = 'none'
+                }
+            })
+            previous.addEventListener('click', ()=>{
+                num--
+                if(num == 2) {
+                    secondSection.style.display = 'block'
+                    thirdSection.style.display = 'none'
+                    next.style.display = 'block'
+                } else if (num == 1) {
+                    secondSection.style.display = 'none'
+                    firstSection.style.display = 'block'
+                    previous.style.display = 'none'
+                    next.style.display = 'block'
+                }
+            })
+        </script>
+
+    </body>
+</html>
