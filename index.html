@@ -88,7 +88,7 @@
 
             input {
                 width: 100%;
-                margin: 20px 0px;
+                margin: 20px 10px;
                 outline: none;
                 height: 40px;
                 font-size: 1.8rem;
@@ -142,7 +142,14 @@
             #first-section,  #second-section, #third-section {
               animation: animate 500ms ease-out forwards;
             }
-
+            .icon-container {
+              display: flex;
+              align-items: baseline;
+            }
+            .icon {
+              width: 20px;
+              
+            }
             @keyframes animate {
               from {
                 opacity: 0;
@@ -285,19 +292,59 @@
                     <h3 class="section-title">Pharmacy Owner</h3>
 
                     <div class="input-container">
-                        <input type="text" name="firstName" placeholder="First Name" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="user.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="input-container">
-                        <input type="text" name="lastName" placeholder="Last Name" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="user.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="input-container">
-                        <input type="email" name="email" placeholder="Email" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="gmail.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="input-container">
-                        <input type="number" name="mobile1" placeholder="Mobile 1" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="phone.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="number" name="mobile1" placeholder="Mobile 1" required>
+                        </div>
+                      </div>
                     </div>
+
                     <div class="input-container">
-                        <input type="number" name="mobile2" placeholder="Mobile 2" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="phone.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="number" name="mobile2" placeholder="Mobile 2" required>
+                        </div>
+                      </div>
+                      
                     </div>
                     <div class="input-container">
                         <select name="gender" id="gender" required>
@@ -309,13 +356,37 @@
                         
                     <h3 style="padding-top: 20px;" class="section-title">Premises Details</h2>
                     <div class="input-container">
-                        <input type="text" name="pharmacyName" placeholder="Name of Pharmacy" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="name.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="text" name="pharmacyName" placeholder="Name of Pharmacy" required>
+                        </div>
+                      </div>
+                       
                     </div>
                     <div class="input-container">
-                        <input type="text" name="state" placeholder="State" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="map.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="text" name="state" placeholder="State" required>
+                        </div>
+                      </div>
+                        
                     </div>
                     <div class="input-container">
-                        <input type="text" name="city" placeholder="City" required>
+                        <div class="icon-container">
+                          <div>
+                            <img src="map.svg" alt="" class="icon">
+                          </div>
+                          <div>
+                            <input type="text" name="city" placeholder="City" required>
+                          </div>
+                        </div>
+                      
                     </div>
                     <div class="input-container">
                         <label for="registrationYear" id="label">Year of Registration</label>
@@ -330,15 +401,41 @@
                     <p id="three" class="number-description">3 of 3</p>
                     <h3 class="section-title">Attachments</h3>
                     <div class="input-container">
-                        <input type="number" name="licenseNumber" placeholder="Pharmacy License Number" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="license.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <input type="number" name="licenseNumber" placeholder="Pharmacy License Number" required>
+                        </div>
+                        
+                      </div>
+                        
                     </div>
 
                     <div class="input-container">
-                        <label for="licenseExpDate" id="label" style="text-align: left">License Expiry Date</label>
-                        <input type="date" name="licenseExpDate" id="licenseExpDate" placeholder="License Expiry Date" required>
+                      <div class="icon-container">
+                        <div>
+                          <img src="license.svg" alt="" class="icon">
+                        </div>
+                        <div>
+                          <label for="licenseExpDate" id="label" style="padding-left: 10px">License Expiry Date</label>
+                          <input type="date" name="licenseExpDate" id="licenseExpDate" placeholder="License Expiry Date" required>
+                        </div>
+                      </div>
                     </div>
-                    <div class="input-container">                    
-                        <input type="file" name="licenseFile" placeholder="Upload Pharmacy License" required>
+                    
+                    <div class="input-container">  
+                        <div class="icon-container">
+                          <div>
+                            <img src="license.svg" alt="" class="icon">
+                          </div>
+                          <div>
+                            <label for="licenseExpDate" id="label" style="padding-left: 10px">Upload Pharmacy License</label>
+                            <input type="file" name="licenseFile" placeholder="Upload Pharmacy License" required>
+                          </div>
+                        </div>                  
+                        
                     </div>
                     <div class="input-container">
                         <button type="submit">Submit</button>
